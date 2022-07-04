@@ -1,0 +1,33 @@
+<%- include('header'); -%>
+    <div class="box" id="heading">
+    <h1><%= listType %></h1>
+</div>
+
+
+     <div class="box">  
+
+        <% for(var i=0;i< newToDo.length ;i++){ %>
+            <div class="item">
+                <input type="checkbox" name="" id="">
+        <p><%= newToDo[i] %></p>
+    </div>
+       <% } %>
+    
+
+    <form action="/" method="post">
+        <input type="text" name="newToDo" placeholder="New Item" autocomplete="off">
+        
+        <button type="submit" name="submit" value= "<%= value %>" >+</button>
+    </form>
+
+</div> 
+    <!-- this is the scriplet tag..use as much code in one line and its only used for control flow -->
+   <!-- <%/* if(kindOfDay == "saturday" || kindOfDay == "sunday"){ */%>
+    <h1 style="color: blue;">its a <%=/* kindOfDay*/ %></h1>
+<%/* } else{ */%>
+        <h1 style="color: blueviolet;">its a <%=/* kindOfDay*/ %></h1>
+   <%/* } */%> -->
+    <!-- this is the syntax for commenting an ejs variable <%=/*DayName*/%> -->
+   <!-- <h2>the day is <%=/*DayName*/%></h2> -->
+
+   <%- include('footer'); -%>
